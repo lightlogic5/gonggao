@@ -9,6 +9,5 @@ class articaleView(View):
         upform = articaleForm(request.POST)
         if upform.is_valid():
             aa = upform.save(commit=False)
-            aa.save()
             upform.save_m2m()
             return render(request, 'upform.html', {'selfforms': upform})

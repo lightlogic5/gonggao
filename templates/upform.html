@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-{{ selfforms }}
+<form method="post" action="{% url 'up_articale' %}">
+    {{ selfforms }}
+    {% csrf_token %}
+</form>
+
 </body>
 </html>
